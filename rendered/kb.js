@@ -13051,7 +13051,7 @@ engineering merges them later.</li></ul>`,
     "owner": "support desk",
     "status": "resolved",
     "reviewed": "2026-11-02T00:00:00.000Z",
-    "signature": "CopyJosh / Codex / S01E03 / 2026-11-02"
+    "signature": "v1.eyJzdWIiOiIxMTgyIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTM2NDQ1MjksImV4cCI6MTc5MzczMDkyOX0.sI-3fHxUOnem7ZpsecEL3ANRT_SplfNq0Lb5IUbx5T0"
   };
   var { layout: layout2, title: title2, owner: owner2, status: status2, reviewed: reviewed2, signature } = metadata2;
   var root7 = from_html(

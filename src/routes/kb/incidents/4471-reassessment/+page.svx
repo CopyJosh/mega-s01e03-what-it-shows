@@ -4,7 +4,7 @@ title: 'Date reports: two causes in the combined incident'
 owner: support desk
 status: resolved
 reviewed: 2026-11-02
-signature: 'CopyJosh / Codex / S01E03 / 2026-11-02'
+signature: 'v1.eyJzdWIiOiIxMTgyIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTM2NDQ1MjksImV4cCI6MTc5MzczMDkyOX0.sI-3fHxUOnem7ZpsecEL3ANRT_SplfNq0Lb5IUbx5T0'
 ---
 
 <script>
