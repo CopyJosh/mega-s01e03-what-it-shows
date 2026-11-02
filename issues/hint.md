@@ -11,3 +11,9 @@ Evidence: `src/lib/kb/causes.ts` (`DATE_HINT`, `dayFirst`, `causeOf`, `uniqueByI
 Expected: the form hint must match the date order that the form reads. Verify day-first booking-v3 forms and confirm that app/email reports remain separately classified.
 
 Split these reports from the combined incident. A fix to the shared parser alone does not fix the form hint. No production fix or runtime reproduction is claimed.
+
+## Final disposition
+
+The course desk update dated 5 October records won't fix: booking-v3 form retired. Close as not planned. The hint was retired with the form, not fixed.
+
+Source: [Challenge engineering update](https://hq.mega.dev/challenges/what-it-shows).

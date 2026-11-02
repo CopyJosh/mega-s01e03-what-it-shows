@@ -13049,7 +13049,7 @@ engineering merges them later.</li></ul>`,
     "layout": "runbook",
     "title": "Date reports: two causes in the combined incident",
     "owner": "support desk",
-    "status": "investigated",
+    "status": "resolved",
     "reviewed": "2026-11-02T00:00:00.000Z",
     "signature": "CopyJosh / Codex / S01E03 / 2026-11-02"
   };
@@ -13071,7 +13071,12 @@ A known label and a queued fix do not establish that the problem stopped.</p> <h
 The component below tests causes, not subjects.</p> <!> <p>Different subjects can describe the same cause. Identical subjects can describe different causes.
 Check tenant locale, channel, form, and the report body before merging.
 Keep reports apart when the tenant or cause is unknown; matching subjects do not supply the missing evidence.
-Preserve accepted decision 0001 as history. This page proposes replacing its subject-only rule with cause-based triage.</p> <h2>Follow-up</h2> <p>File separate parser and form-hint tickets with the computed report counts and source evidence.
+Preserve accepted decision 0001 as history. This page proposes replacing its subject-only rule with cause-based triage.</p> <h2>Desk update: 5 October 2026</h2> <p>The <a href="https://hq.mega.dev/challenges/what-it-shows" rel="nofollow">Challenge\u2019s engineering update</a> now closes the combined incident.
+It records separate outcomes:</p> <ul><li>Parser: fixed, with the description <code>fix(dates): parse dd/mm for eu locales</code>.
+Close the <a href="https://github.com/CopyJosh/mega-s01e03-what-it-shows/issues/1" rel="nofollow">parser ticket</a> as completed.</li> <li>Hint: won\u2019t fix, because the booking-v3 form was retired.
+Close the <a href="https://github.com/CopyJosh/mega-s01e03-what-it-shows/issues/2" rel="nofollow">hint ticket</a> as not planned.</li></ul> <p>These are the desk\u2019s reported engineering outcomes. This investigation did not independently test production.
+Retiring a form is different from fixing its hint. Preserve that distinction in the ticket state and the record.
+The historical export and its report counts remain unchanged.</p> <h2>Follow-up</h2> <p>The separate tickets preserve the computed report counts, source evidence, and distinct closure reasons.
 Investigate the one-day descriptions without inventing a third confirmed cause.
 Re-read the table, timeline, and triage examples when the underlying data changes.
 This page records an investigation, not a deployed fix.</p> <!>`,
@@ -13088,7 +13093,7 @@ This page records an investigation, not a deployed fix.</p> <!>`,
         QueueTimeline(node_1, { ticket: 4471 });
         var node_2 = sibling(node_1, 8);
         DedupeExplorer(node_2, {});
-        var node_3 = sibling(node_2, 8);
+        var node_3 = sibling(node_2, 16);
         RenderStamp(node_3, {
           get signature() {
             return signature;

@@ -13,3 +13,9 @@ Five reports describe a one-day move: R-41202, R-41209, R-41236, R-41344, and R-
 Expected: parse each date with the tenant's date convention and preserve the intended date. Verify ambiguous dates with day-first tenants and preserve month-first behavior. Keep booking-v3 form-hint reports in their own ticket.
 
 This ticket records a problem; no production fix or runtime reproduction is claimed.
+
+## Final disposition
+
+The course desk update dated 5 October reports the parser fixed: `fix(dates): parse dd/mm for eu locales`. Close as completed. This is a course-reported outcome; this investigation did not independently verify production.
+
+Source: [Challenge engineering update](https://hq.mega.dev/challenges/what-it-shows).

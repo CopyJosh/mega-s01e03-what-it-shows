@@ -1,4 +1,14 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><!--e2jw2j--><!----><title>Date reports: two causes in the combined incident · support kb</title><style>
+  aside.svelte-17bri61 { border-left: 4px solid var(--accent); padding: 0.5rem 1rem; margin: 1rem 0; background: var(--note-bg); }
+  aside.warn.svelte-17bri61 { border-color: var(--warn); background: var(--warn-bg); }
+
+
+  .try.svelte-gq0h2h { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem; margin: 1rem 0; }
+  fieldset.svelte-gq0h2h { display: grid; gap: 0.4rem; border: 1px solid var(--line); border-radius: 6px; }
+  .verdict.svelte-gq0h2h { grid-column: 1 / -1; margin: 0; font-weight: 600; color: var(--muted); }
+  .dup.svelte-gq0h2h { color: var(--accent); font-weight: 600; }
+
+
   :root {
     --bg: #fbfaf7; --fg: #1d1d1b; --muted: #6b6a66; --line: #e3e0d8;
     --accent: #2f6f5e; --warn: #b4501f; --warn-bg: #fbeee6; --note-bg: #eef5f2;
@@ -28,16 +38,6 @@
   .stale.svelte-tbc1ha { color: var(--warn); font-weight: 600; }
 
 
-  .try.svelte-gq0h2h { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem; margin: 1rem 0; }
-  fieldset.svelte-gq0h2h { display: grid; gap: 0.4rem; border: 1px solid var(--line); border-radius: 6px; }
-  .verdict.svelte-gq0h2h { grid-column: 1 / -1; margin: 0; font-weight: 600; color: var(--muted); }
-  .dup.svelte-gq0h2h { color: var(--accent); font-weight: 600; }
-
-
-  aside.svelte-17bri61 { border-left: 4px solid var(--accent); padding: 0.5rem 1rem; margin: 1rem 0; background: var(--note-bg); }
-  aside.warn.svelte-17bri61 { border-color: var(--warn); background: var(--warn-bg); }
-
-
   svg.svelte-18a6qal { width: 100%; max-width: 640px; }
   .in.svelte-18a6qal { fill: var(--warn); }
   .merged.svelte-18a6qal { fill: var(--accent); }
@@ -58,7 +58,7 @@
   .stamp.svelte-1280m42 { margin: 2rem 0 0; font: 0.85rem var(--mono); color: var(--muted); }
   .stamp.svelte-1280m42 b:where(.svelte-1280m42) { color: var(--accent); letter-spacing: 0.04em; }
   .missing.svelte-1280m42 { color: var(--warn); }
-</style></head><body data-route="/kb/incidents/4471-reassessment"><!--[--><div class="kb svelte-e2jw2j"><header><a class="crumb svelte-e2jw2j" href="../../index.html">support desk · kb</a> <h1 class="svelte-e2jw2j">Date reports: two causes in the combined incident</h1> <p class="meta svelte-e2jw2j"><span>owner <b>support desk</b></span> <span class="status investigated svelte-e2jw2j">investigated</span> <span class="svelte-e2jw2j">reviewed 2026-11-02 · 0 days ago</span></p></header> <!--[-1--><!--]--> <main><p>The <a href="../4471/index.html">original incident page</a> calls the date reports one known parser issue.
+</style></head><body data-route="/kb/incidents/4471-reassessment"><!--[--><div class="kb svelte-e2jw2j"><header><a class="crumb svelte-e2jw2j" href="../../index.html">support desk · kb</a> <h1 class="svelte-e2jw2j">Date reports: two causes in the combined incident</h1> <p class="meta svelte-e2jw2j"><span>owner <b>support desk</b></span> <span class="status resolved svelte-e2jw2j">resolved</span> <span class="svelte-e2jw2j">reviewed 2026-11-02 · 0 days ago</span></p></header> <!--[-1--><!--]--> <main><p>The <a href="../4471/index.html">original incident page</a> calls the date reports one known parser issue.
 Its own computed table shows separate causes. Keep one ticket per cause.
 This investigation uses the export dated 4 October 2026. It does not establish the current production state.</p> <h2>Count reports by cause</h2> <p class="sum svelte-12oyimm"><strong>412</strong> reports merged into #4471 · <strong>2</strong> causes</p> <table><thead><tr><th>cause</th><th>reports</th><th>tagged as</th><th>tenants</th><th>seen</th><th></th></tr></thead><tbody><!--[--><tr class="svelte-12oyimm"><td class="svelte-12oyimm"><code>parser</code></td><td class="svelte-12oyimm">379</td><td class="tags svelte-12oyimm">parser ×356 · hint ×23</td><td class="svelte-12oyimm">11</td><td class="svelte-12oyimm">2026-04-01 → 2026-10-04</td><td class="svelte-12oyimm">#4471</td></tr><tr class="svelte-12oyimm wrong"><td class="svelte-12oyimm"><code>hint</code></td><td class="svelte-12oyimm">33</td><td class="tags svelte-12oyimm">hint ×18 · parser ×15</td><td class="svelte-12oyimm">3</td><td class="svelte-12oyimm">2026-04-17 → 2026-09-22</td><td class="svelte-12oyimm">not this ticket — no ticket of its own</td></tr><!--]--></tbody></table> <!--[--><!--[0--><p class="note svelte-12oyimm">5 reports read as a one-day move; filed under <code>parser</code> by tenant.</p><!--]--><!--[-1--><!--]--><!--]--><!----> <p>The export overlaps report pages. Deduplicate by report ID before counting.
 Use the tenant directory, the platform’s date order, the report channel, and the booking form.
@@ -74,7 +74,12 @@ A known label and a queued fix do not establish that the problem stopped.</p> <h
 The component below tests causes, not subjects.</p> <div class="try svelte-gq0h2h"><!--[--><fieldset class="svelte-gq0h2h"><legend>report A</legend> <select aria-label="tenant"><!--[--><option selected="">alder.physio</option><option>copper.studio</option><option>harbour.dental</option><option>kettle.books</option><option>lantern.row</option><option>long.table</option><option>morrow.tax</option><option>nine.lanterns</option><option>pale.harbour</option><option>ridge.clinic</option><option>stone.and.sons</option><!--]--></select> <select aria-label="channel"><!--[--><option>app</option><option>email</option><option selected="">form</option><!--]--></select> <input value="Booking on the wrong date" aria-label="subject"/> <code>hint</code></fieldset><fieldset class="svelte-gq0h2h"><legend>report B</legend> <select aria-label="tenant"><!--[--><option>alder.physio</option><option>copper.studio</option><option>harbour.dental</option><option selected="">kettle.books</option><option>lantern.row</option><option>long.table</option><option>morrow.tax</option><option>nine.lanterns</option><option>pale.harbour</option><option>ridge.clinic</option><option>stone.and.sons</option><!--]--></select> <select aria-label="channel"><!--[--><option>app</option><option>email</option><option selected="">form</option><!--]--></select> <input value="Booking on the wrong date" aria-label="subject"/> <code>parser</code></fieldset><!--]--> <p class="verdict svelte-gq0h2h">different causes — keep apart</p></div> <table><thead><tr><th>case</th><th>same subject</th><th>same cause</th></tr></thead><tbody><!--[--><tr><td>app vs email, same tenant</td><td>no</td><td class="svelte-gq0h2h dup">yes</td></tr><tr><td>same subject, same tenant, different channel</td><td>yes</td><td class="svelte-gq0h2h">no</td></tr><tr><td>same subject, same channel, different tenant</td><td>yes</td><td class="svelte-gq0h2h">no</td></tr><tr><td>different subject, same way in</td><td>no</td><td class="svelte-gq0h2h dup">yes</td></tr><tr><td>no tenant on file</td><td>yes</td><td class="svelte-gq0h2h">no</td></tr><!--]--></tbody></table><!----> <p>Different subjects can describe the same cause. Identical subjects can describe different causes.
 Check tenant locale, channel, form, and the report body before merging.
 Keep reports apart when the tenant or cause is unknown; matching subjects do not supply the missing evidence.
-Preserve accepted decision 0001 as history. This page proposes replacing its subject-only rule with cause-based triage.</p> <h2>Follow-up</h2> <p>File separate parser and form-hint tickets with the computed report counts and source evidence.
+Preserve accepted decision 0001 as history. This page proposes replacing its subject-only rule with cause-based triage.</p> <h2>Desk update: 5 October 2026</h2> <p>The <a href="https://hq.mega.dev/challenges/what-it-shows" rel="nofollow">Challenge’s engineering update</a> now closes the combined incident.
+It records separate outcomes:</p> <ul><li>Parser: fixed, with the description <code>fix(dates): parse dd/mm for eu locales</code>.
+Close the <a href="https://github.com/CopyJosh/mega-s01e03-what-it-shows/issues/1" rel="nofollow">parser ticket</a> as completed.</li> <li>Hint: won’t fix, because the booking-v3 form was retired.
+Close the <a href="https://github.com/CopyJosh/mega-s01e03-what-it-shows/issues/2" rel="nofollow">hint ticket</a> as not planned.</li></ul> <p>These are the desk’s reported engineering outcomes. This investigation did not independently test production.
+Retiring a form is different from fixing its hint. Preserve that distinction in the ticket state and the record.
+The historical export and its report counts remain unchanged.</p> <h2>Follow-up</h2> <p>The separate tickets preserve the computed report counts, source evidence, and distinct closure reasons.
 Investigate the one-day descriptions without inventing a third confirmed cause.
 Re-read the table, timeline, and triage examples when the underlying data changes.
 This page records an investigation, not a deployed fix.</p> <!--[0--><p class="stamp svelte-1280m42">desk ref <b class="svelte-1280m42">DR-CEFQ-G508</b></p><!--]--><!----><!----></main> <footer class="svelte-e2jw2j">Pages are written by people. Tables and charts are built from data at render time.</footer></div><!--]--><script src="../../kb.js"></script></body></html>

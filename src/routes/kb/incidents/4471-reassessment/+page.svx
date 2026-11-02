@@ -2,7 +2,7 @@
 layout: runbook
 title: 'Date reports: two causes in the combined incident'
 owner: support desk
-status: investigated
+status: resolved
 reviewed: 2026-11-02
 signature: 'CopyJosh / Codex / S01E03 / 2026-11-02'
 ---
@@ -59,9 +59,23 @@ Check tenant locale, channel, form, and the report body before merging.
 Keep reports apart when the tenant or cause is unknown; matching subjects do not supply the missing evidence.
 Preserve accepted decision 0001 as history. This page proposes replacing its subject-only rule with cause-based triage.
 
+## Desk update: 5 October 2026
+
+The [Challenge's engineering update](https://hq.mega.dev/challenges/what-it-shows) now closes the combined incident.
+It records separate outcomes:
+
+- Parser: fixed, with the description `fix(dates): parse dd/mm for eu locales`.
+  Close the [parser ticket](https://github.com/CopyJosh/mega-s01e03-what-it-shows/issues/1) as completed.
+- Hint: won't fix, because the booking-v3 form was retired.
+  Close the [hint ticket](https://github.com/CopyJosh/mega-s01e03-what-it-shows/issues/2) as not planned.
+
+These are the desk's reported engineering outcomes. This investigation did not independently test production.
+Retiring a form is different from fixing its hint. Preserve that distinction in the ticket state and the record.
+The historical export and its report counts remain unchanged.
+
 ## Follow-up
 
-File separate parser and form-hint tickets with the computed report counts and source evidence.
+The separate tickets preserve the computed report counts, source evidence, and distinct closure reasons.
 Investigate the one-day descriptions without inventing a third confirmed cause.
 Re-read the table, timeline, and triage examples when the underlying data changes.
 This page records an investigation, not a deployed fix.
