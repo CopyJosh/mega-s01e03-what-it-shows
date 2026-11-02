@@ -1,0 +1,69 @@
+---
+layout: runbook
+title: 'Date reports: two causes in the combined incident'
+owner: support desk
+status: investigated
+reviewed: 2026-11-02
+signature: 'CopyJosh / Codex / S01E03 / 2026-11-02'
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
+  import DedupeExplorer from '#lib/kb/DedupeExplorer.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+The [original incident page](/kb/incidents/4471) calls the date reports one known parser issue.
+Its own computed table shows separate causes. Keep one ticket per cause.
+This investigation uses the export dated 4 October 2026. It does not establish the current production state.
+
+## Count reports by cause
+
+<CauseTable ticket={4471} />
+
+The export overlaps report pages. Deduplicate by report ID before counting.
+Use the tenant directory, the platform's date order, the report channel, and the booking form.
+The browser locale and intake tag are guesses, not the tenant's date convention.
+
+The shared parser reads dates month first. It can swap the day and month for day-first tenants.
+This group includes app and email reports, plus booking-v2 form reports.
+
+The booking-v3 form displays `MM/DD/YYYY` to day-first tenants, then reads their input day first.
+This is a separate hint defect. Fixing the shared parser alone does not fix it.
+Keep these form reports in their own ticket.
+
+The table also preserves the desk's one-day-move notes.
+Those reports remain counted under parser by the component's classification.
+Their descriptions need investigation: a one-day symptom alone does not prove a month/day swap.
+Do not silently discard them or count them twice.
+
+## When the desk received and merged reports
+
+<QueueTimeline ticket={4471} />
+
+Reports arrived before the large merge on 2 July. The merge spike does not mark when the incident began.
+The received and merged series measure different events. The desk continued to receive reports after the merge.
+A known label and a queued fix do not establish that the problem stopped.
+
+## Replace subject-only triage
+
+The [triage page](/kb/triage/dedupe) and [accepted decision 0001](/kb/decisions/0001-dedupe-by-subject)
+use matching subjects. Their review date is old enough to trigger the layout's stale notice.
+The component below tests causes, not subjects.
+
+<DedupeExplorer />
+
+Different subjects can describe the same cause. Identical subjects can describe different causes.
+Check tenant locale, channel, form, and the report body before merging.
+Keep reports apart when the tenant or cause is unknown; matching subjects do not supply the missing evidence.
+Preserve accepted decision 0001 as history. This page proposes replacing its subject-only rule with cause-based triage.
+
+## Follow-up
+
+File separate parser and form-hint tickets with the computed report counts and source evidence.
+Investigate the one-day descriptions without inventing a third confirmed cause.
+Re-read the table, timeline, and triage examples when the underlying data changes.
+This page records an investigation, not a deployed fix.
+
+<RenderStamp {signature} />

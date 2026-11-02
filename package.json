@@ -1,0 +1,13 @@
+{
+  "name": "mega-s01e03-work",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "mdsvex": "^0.12.8",
+    "svelte": "^5.57.3"
+  },
+  "scripts": {
+    "build": "node build.mjs"
+  }
+}
